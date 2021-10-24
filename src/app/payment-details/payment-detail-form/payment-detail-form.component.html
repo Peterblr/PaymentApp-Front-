@@ -1,24 +1,27 @@
 <form>
     <input type="hidden" name="paymentDetailId"
     [value]="service.formData.paymentDetailId" />
-    <div class="form-group">
+    <div class="form-group mt-3 mb-3">
         <label>CARD OVNER NAME</label>
-        <input class="form-control form-control-lg" placeholder="Full Name"
+        <input class="form-control form-control-lg mt-3 mb-3" placeholder="Full Name"
         name="cardOwnerName" #cardOwnerName="ngModel" [(ngModel)]="service.formData.cardOwnerName">
     </div>
-    <div class="form-group">
+    <div class="form-group mt-3 mb-3">
         <label>CARD NUMBER</label>
-        <input class="form-control form-control-lg" placeholder="16 Digit Card Number"
+        <input class="form-control form-control-lg mt-3 mb-3" placeholder="16 Digit Card Number"
         name="cardNumber" #cardNumber="ngModel" [(ngModel)]="service.formData.cardNumber">
     </div>    
-    <div class="form-group">
-        <label>VALIDE THROUGH</label>
-        <input class="form-control form-control-lg" placeholder="MM/YY"
-        name="expirationDate" #expirationDate="ngModel" [(ngModel)]="service.formData.expirationDate">
+    <div class="row">
+        <div class="form-group col-md-6">
+            <label>VALIDE THROUGH</label>
+            <input class="form-control form-control-lg mt-3 mb-3" placeholder="MM/YY"
+            name="expirationDate" #expirationDate="ngModel" [(ngModel)]="service.formData.expirationDate">
+        </div>
+        <div class="form-group col-md-6">
+            <label>SECURITY CODE</label>
+            <input type="password" class="form-control form-control-lg mt-3 mb-3" placeholder="Security Code"
+            name="securityCode" #securityCode="ngModel" [(ngModel)]="service.formData.securityCode">
+        </div>
     </div>
-    <div class="form-group">
-        <label>SECURITY CODE</label>
-        <input type="password" class="form-control form-control-lg" placeholder="Security Code"
-        name="securityCode" #securityCode="ngModel" [(ngModel)]="service.formData.securityCode">
-    </div>
+    
 </form>
